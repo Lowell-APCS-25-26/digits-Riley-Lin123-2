@@ -17,10 +17,11 @@ public class Digits {
         if (num == 0){
             digits.add(0);
         }
-        while (num > 0){
-            int digit = num%10;
+        int nums = num;
+        while (nums > 0){
+            int digit = nums%10;
             digits.add(0,digit);
-            num = num/10;
+            nums = nums/10;
         }
        
     }
