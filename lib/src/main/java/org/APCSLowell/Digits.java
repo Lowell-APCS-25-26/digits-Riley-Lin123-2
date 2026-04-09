@@ -3,7 +3,7 @@ package org.APCSLowell;
 import java.util.ArrayList;
 
 public class Digits {
-    /** The list of digits from the number used to construct this object.
+   /** The list of digits from the number used to construct this object.
      *  The digits appear in the list in the same order in which they appear in the original number
      */
     public ArrayList<Integer> digits;
@@ -14,31 +14,31 @@ public class Digits {
     public Digits(int num) {
         /* To be implemented in part (a) */
         digits = new ArrayList<Integer>();
-        if(num ==0){
+        if (num == 0){
             digits.add(0);
         }
-        int n = num;
-        while(n>0){
-            digits.add(0,n%10);
-            n = n/10;
+        int nums = num;
+        while (nums > 0){
+            digits.add(0,nums%10);
+            nums = nums/10;
         }
-            //throw new UnsupportedOperationException();
-
+       
     }
 
     /** Returns `true` if the digits in this `Digits` object are in strictly increasing order;
      *      `false` otherwise.
      */
     public boolean isStrictlyIncreasing() {
-
         /* To be implemented in part (b) */
-        for(int i =0;i<digits.size()-1;i++){
-            if(digits.get(i)>=digits.get(i+1)){
+        int i = 0;
+        while (i < digits.size()-1){
+            if (digits.get(i+1) <= digits.get(i)){
                 return false;
+            } else {
+                i++;
             }
         }
         return true;
-                //throw new UnsupportedOperationException();
-
+       
     }
 }
