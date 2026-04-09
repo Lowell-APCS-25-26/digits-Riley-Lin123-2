@@ -19,8 +19,7 @@ public class Digits {
         }
         int nums = num;
         while (nums > 0){
-            int digit = nums%10;
-            digits.add(0,digit);
+            digits.add(0,nums%10);
             nums = nums/10;
         }
        
