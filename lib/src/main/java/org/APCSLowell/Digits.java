@@ -6,20 +6,20 @@ public class Digits {
     /** The list of digits from the number used to construct this object.
      *  The digits appear in the list in the same order in which they appear in the original number
      */
-    public ArrayList<Integer> digitList;
+    public ArrayList<Integer> digits;
 
     /** Constructs a `Digits` object that represents `num`.
      *  *Precondition*: `num >= 0`
      */
     public Digits(int num) {
         /* To be implemented in part (a) */
-        digitList = new ArrayList<Integer>();
+        digits = new ArrayList<Integer>();
         if (num == 0){
-            digitList.add(0);
+            digits.add(0);
         }
         while (num > 0){
             int digit = num%10;
-            digitList.add(0,digit);
+            digits.add(0,digit);
             num = num/10;
         }
        
@@ -31,8 +31,8 @@ public class Digits {
     public boolean isStrictlyIncreasing() {
         /* To be implemented in part (b) */
         int i = 0;
-        while (i < digitList.size()-1){
-            if (digitList.get(i+1) <= digitList.get(i)){
+        while (i < digits.size()-1){
+            if (digits.get(i+1) <= digits.get(i)){
                 return false;
             } else {
                 i++;
